@@ -14,7 +14,10 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [mongoose_1.MongooseModule.forRoot(process.env.DATABASE_URL), tasks_module_1.TasksModule],
+        imports: [
+            mongoose_1.MongooseModule.forRoot('mongodb+srv://coolt:030603ra@list.kvr17.mongodb.net/?retryWrites=true&w=majority'),
+            tasks_module_1.TasksModule,
+        ],
         controllers: [],
         providers: [],
     })
