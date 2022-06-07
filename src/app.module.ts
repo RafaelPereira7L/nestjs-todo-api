@@ -5,7 +5,7 @@ import { TasksModule } from './tasks/tasks.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://coolt:030603ra@list.kvr17.mongodb.net/?retryWrites=true&w=majority',
+      process.env.DB_URL,
     ),
     TasksModule,
   ],
