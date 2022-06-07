@@ -3,7 +3,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { TasksModule } from './tasks/tasks.module';
 
 @Module({
-  imports: [MongooseModule.forRoot(process.env.DATABASE_URL), TasksModule],
+  imports: [
+    MongooseModule.forRoot(
+      'DATABASE_URL=mongodb+srv://coolt:030603ra@list.kvr17.mongodb.net/?retryWrites=true&w=majority',
+    ),
+    TasksModule,
+  ],
   controllers: [],
   providers: [],
 })
